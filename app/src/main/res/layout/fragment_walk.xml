@@ -6,7 +6,7 @@
     tools:context=".WalkFragment">
 
     <Button
-        android:onClick="fragment_walk__step"
+        android:onClick="fragment_walk_stepcount"
         android:id="@+id/createWS"
         style="@style/CustomButtonStyle"
         android:layout_width="match_parent"
