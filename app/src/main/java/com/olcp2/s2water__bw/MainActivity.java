@@ -1,22 +1,16 @@
 package com.olcp2.s2water__bw;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.olcp2.s2water__bw.databinding.ActivityMainBinding;
-
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
-
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,23 +18,28 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        replaceFragment(new HomeFragment());
+        // Set the default fragment
+        if (savedInstanceState == null) {
+            replaceFragment(new HomeFragment());
+        }
 
-        binding.bottomNavigationView.setOnItemReselectedListener(item -> {
-
-            switch (item.getItemId()){
+        // Set up BottomNavigationView listener
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
                 case R.id.home:
                     replaceFragment(new HomeFragment());
-                    break;
+                    return true;
                 case R.id.walk:
                     replaceFragment(new WalkFragment());
-                    break;
+                    return true;
                 case R.id.stats:
                     replaceFragment(new StatsFragment());
-                    break;
+                    return true;
                 case R.id.setting:
                     replaceFragment(new SettingFragment());
-                    break;
+                    return true;
+                default:
+                    return false;
             }
         });
     }
@@ -51,5 +50,4 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
     }
-
 }

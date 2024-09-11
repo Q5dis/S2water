@@ -1,9 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.S2water__BW" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.S2water__BW" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Primary color palette -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
+
+        <!-- Other theme customizations -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
     </style>
 
+    <!-- App Theme -->
     <style name="Theme.S2water__BW" parent="Base.Theme.S2water__BW" />
 </resources>
