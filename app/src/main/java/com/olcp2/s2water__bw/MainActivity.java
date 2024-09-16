@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import com.olcp2.s2water__bw.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,20 +20,20 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the default fragment
         if (savedInstanceState == null) {
-            replaceFragment(new HomeFragment());
+            replaceFragment(new WaterCheckFragment());
         }
 
         // Set up BottomNavigationView listener
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.home:
-                    replaceFragment(new HomeFragment());
+                    replaceFragment(new WaterCheckFragment());
                     return true;
                 case R.id.walk:
-                    replaceFragment(new WalkFragment());
+                    replaceFragment(new StepCountFragment());
                     return true;
                 case R.id.stats:
-                    replaceFragment(new StatsFragment());
+                    replaceFragment(new StatTrackingFragment());
                     return true;
                 case R.id.setting:
                     replaceFragment(new SettingFragment());

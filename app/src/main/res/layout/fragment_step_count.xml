@@ -3,25 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WalkFragment">
+    tools:context=".StepCountFragment">
 
     <Button
-        android:onClick="fragment_walk_stepcount"
+        android:onClick="fragment_create_step_count"
         android:id="@+id/createWS"
         style="@style/CustomButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="40dp"
         android:text="+"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textColorHighlight="@color/white"
         android:background="@drawable/wide_button"
         android:textSize="30sp" />
-
-
 
 </FrameLayout>
