@@ -7,7 +7,7 @@
 
     <Button
         android:onClick="fragment_create_step_count"
-        android:id="@+id/createWS"
+        android:id="@+id/createStepCount"
         style="@style/CustomButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
