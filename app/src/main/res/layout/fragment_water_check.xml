@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:gravity="center"
-            android:text="순수한 물을\n총 950ml\n마셨어요!"
+            android:text="순수한 물을\n총 0ml\n마셨어요!"
             android:textColor="#000000"
             android:textSize="23sp" />
 
@@ -31,32 +31,13 @@
             android:clickable="true"
             android:focusable="true" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginEnd="8dp"
-                android:src="@drawable/bluecircle_shape" />
-
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:src="@drawable/graycircle_shape" />
-        </LinearLayout>
-
         <TextView
             android:id="@+id/textView_goalLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="목표 음수량 도달까지 42ml 남았어요!"
+            android:text="목표 음수량 도달까지 1000ml 남았어요!"
             android:textSize="15sp"
             android:gravity="center"
             android:layout_marginTop="16dp"/>
     </LinearLayout>
-
 </FrameLayout>
