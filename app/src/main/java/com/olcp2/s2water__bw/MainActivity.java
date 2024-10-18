@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.home:
-                    replaceFragment(new WaterCheckFragment());
+                    replaceFragment(new MainPageManager());
                     return true;
                 case R.id.walk:
                     replaceFragment(new StepCountFragment());

@@ -40,12 +40,14 @@
             android:layout_marginTop="20dp">
 
             <Button
+                style="@style/CustomButtonStyle"
                 android:id="@+id/button_reset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="삭제하기"/>
 
             <Button
+                style="@style/CustomButtonStyle"
                 android:id="@+id/button_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

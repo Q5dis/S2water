@@ -3,7 +3,7 @@
     <style name="Base.Theme.S2water__BW" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- Primary color palette -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#2643FF</item>
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorOnSecondary">@color/colorOnSecondary</item>

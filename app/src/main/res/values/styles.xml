@@ -7,8 +7,8 @@
 
     <style name="CustomBotNav" parent="Widget.Design.BottomNavigationView">
         <item name="android:background">#ffffff</item>
-        <item name="itemIconTint">@null</item>  <!-- 아이콘 색상 제거 -->
-        <item name="itemTextColor">@android:color/transparent</item>  <!-- 텍스트 색상 제거 -->
+        <item name="itemIconTint">@null</item>
+        <item name="itemTextColor">@android:color/transparent</item>
     </style>
 
 </resources>

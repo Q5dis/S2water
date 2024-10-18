@@ -30,6 +30,7 @@
             android:layout_margin="16dp">
 
             <Button
+                style="@style/CustomButtonStyle"
                 android:id="@+id/weekViewButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,6 +38,7 @@
                 android:text="주간 보기" />
 
             <Button
+                style="@style/CustomButtonStyle"
                 android:id="@+id/monthViewButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,6 +69,7 @@
             android:layout_margin="16dp">
 
             <Button
+                style="@style/CustomButtonStyle"
                 android:id="@+id/prevMonthButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,6 +86,7 @@
                 android:textAlignment="center"/>
 
             <Button
+                style="@style/CustomButtonStyle"
                 android:id="@+id/nextMonthButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
