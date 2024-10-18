@@ -1,64 +1,53 @@
 package com.olcp2.s2water__bw;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link progressbar#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class progressbar extends Fragment {
+import androidx.appcompat.app.AppCompatActivity;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public progressbar() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment progressbar.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static progressbar newInstance(String param1, String param2) {
-        progressbar fragment = new progressbar();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+public class progressbar extends AppCompatActivity {
+    private SeekBar seekBar;
+    private TextView textViewTotalAmount;
+    private Button buttonAdd;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+        setContentView(R.layout.fragment_progressbar); // XML 레이아웃 파일
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_progressbar, container, false);
+        seekBar = findViewById(R.id.seekBar);
+        textViewTotalAmount = findViewById(R.id.textView_totalAmount);
+        buttonAdd = findViewById(R.id.button_add);
+
+        // SeekBar의 값이 변경될 때마다 호출되는 리스너
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                // SeekBar에서 선택한 값을 텍스트로 업데이트
+                textViewTotalAmount.setText(progress + " ml");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // 터치 시작할 때
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // 터치 끝났을 때
+            }
+        });
+
+        buttonAdd.setOnClickListener(v -> {
+            int selectedAmount = seekBar.getProgress();
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("addedWater", selectedAmount); // 추가할 양 반환
+            setResult(RESULT_OK, resultIntent);
+            finish(); // 액티비티 종료
+        });
     }
 }

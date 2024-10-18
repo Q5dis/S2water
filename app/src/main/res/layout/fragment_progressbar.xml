@@ -9,28 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:gravity="center">
 
         <TextView
             android:id="@+id/textView_totalAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="500ml"
+            android:text="0 ml"
             android:textSize="30sp"
             android:textColor="#000000"
             android:gravity="center"/>
 
-        <!-- 사각형 ProgressBar 추가 -->
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="100dp"
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="wrap_content"
             android:layout_height="300dp"
-            android:layout_marginTop="20dp"
-            android:indeterminate="false"
-            android:progressDrawable="@drawable/custom_progress_bar" />
+            android:orientation="vertical"
+            android:max="1000"
+            android:layout_marginTop="20dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -55,6 +52,4 @@
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
     </LinearLayout>
-
-
 </FrameLayout>
