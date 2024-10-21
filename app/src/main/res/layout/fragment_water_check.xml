@@ -65,22 +65,5 @@
                 />
         </FrameLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginEnd="8dp"
-                android:src="@drawable/bluecircle_shape" />
-
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:src="@drawable/graycircle_shape" />
-        </LinearLayout>
     </LinearLayout>
 </FrameLayout>
