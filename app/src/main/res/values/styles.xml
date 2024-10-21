@@ -5,6 +5,12 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
+    <style name="ChooseButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">#2643FF</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
     <style name="CustomBotNav" parent="Widget.Design.BottomNavigationView">
         <item name="android:background">#ffffff</item>
         <item name="itemIconTint">@null</item>

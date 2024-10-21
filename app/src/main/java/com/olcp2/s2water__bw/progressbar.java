@@ -47,8 +47,9 @@ public class progressbar extends AppCompatActivity {
         });
 
         buttonReset.setOnClickListener(v -> {
+            int selectedAmount = seekBar.getProgress();
             Intent resultIntent = new Intent();
-            resultIntent.putExtra("resetValues", true);
+            resultIntent.putExtra("deletedWater", selectedAmount);
             setResult(RESULT_OK, resultIntent);
             finish();
         });
