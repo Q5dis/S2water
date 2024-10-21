@@ -1,5 +1,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#0000FF" />  <!-- 파란색 작은 동그라미 -->
+    <solid android:color="#2643FF" />  <!-- 파란색 작은 동그라미 -->
     <corners android:radius="10dp"/>    <!-- 반지름 설정 -->
     <size
         android:width="20dp"

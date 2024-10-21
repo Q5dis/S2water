@@ -11,10 +11,6 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <!-- 순수한 물을 + 총 120ml + 마셨어요! 넘겨쓰기 문구 -->
-
-        <!-- 주황색 네모로 나타내는 물 양 -->
-
         <TextView
             android:id="@+id/textView_jutotalAmount"
             android:layout_width="wrap_content"
@@ -50,14 +46,6 @@
                 android:src="@drawable/orangecircle_shape" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView_goalLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="잘 조절하고 있어요!"
-            android:textSize="15sp"
-            android:gravity="center"
-            android:layout_marginTop="16dp"/>  <!-- 텍스트를 동그라미 아래로 배치 -->
     </LinearLayout>
 
 

@@ -7,36 +7,46 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.FrameLayout;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import android.widget.TextView;
 
 public class WaterCheckFragment extends Fragment {
 
-    private TextView textViewTotalAmount;
-    private TextView textViewGoalLeft;
+    private View waterFill;
     private int totalAmount = 0; // 초기 물 소비량
-    private final int goalAmount = 1000; // 목표 물 소비량
+    private final int goalAmount = 2000; // 목표 물 소비량
+    private final int cupHeight = 310; // 컵 높이
+    private TextView totalAmountTextView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_water_check, container, false);
 
-        textViewTotalAmount = view.findViewById(R.id.textView_totalAmount);
-        textViewGoalLeft = view.findViewById(R.id.textView_goalLeft);
+        waterFill = view.findViewById(R.id.waterFill);
+        FrameLayout cupContainer = view.findViewById(R.id.cupContainer);
+        totalAmountTextView = view.findViewById(R.id.textView_totalAmount); // 텍스트뷰 초기화
 
-        textViewTotalAmount.setText("순수한 물을\n총 " + totalAmount + "ml\n마셨어요!");
-        updateGoalLeft();
+        updateWaterFill();
 
-        View waterProgress = view.findViewById(R.id.waterProgress);
-        waterProgress.setOnClickListener(v -> {
+        cupContainer.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), progressbar.class);
             startActivityForResult(intent, 1);
         });
 
         return view;
     }
+
+    private void updateWaterFill() {
+        int waterHeight = (int) (totalAmount * 0.4);
+        ViewGroup.LayoutParams params = waterFill.getLayoutParams();
+        params.height = waterHeight;
+        waterFill.setLayoutParams(params);
+        totalAmountTextView.setText(totalAmount + " ml");
+    }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -55,18 +65,11 @@ public class WaterCheckFragment extends Fragment {
 
     private void updateTotalAmount(int amount) {
         totalAmount += amount;
-        textViewTotalAmount.setText("순수한 물을\n총 " + totalAmount + "ml\n마셨어요!");
-        updateGoalLeft();
-    }
-
-    private void updateGoalLeft() {
-        int goalLeft = goalAmount - totalAmount;
-        textViewGoalLeft.setText("목표 음수량 도달까지 " + goalLeft + "ml 남았어요!");
+        updateWaterFill(); // 물 양 업데이트
     }
 
     private void resetValues() {
         totalAmount = 0;
-        textViewTotalAmount.setText("순수한 물을\n총 " + totalAmount + "ml\n마셨어요!");
-        updateGoalLeft();
+        updateWaterFill(); // 물 양 초기화
     }
 }
