@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new WaterCheckFragment());
                     return true;
                 case R.id.walk:
-                    replaceFragment(new StepCountFragment());
+                    replaceFragment(new StepCounterManager());
                     return true;
                 case R.id.stats:
                     replaceFragment(new StatTrackingFragment());
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void navigateToStepCount() {
-        replaceFragment(new CreateStepCount());
+        replaceFragment(new StepCounter());
     }
 
 
