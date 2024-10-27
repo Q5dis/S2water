@@ -12,44 +12,83 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/text2"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:gravity="center"
-            android:text="10,100\nsteps left\n540 until your\ngoals!"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/StepCounter"
+            app:layout_constraintBottom_toTopOf="@id/StepCounter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textView_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="목표 걸음 수 까지"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView_totalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="10000 걸음"
+                android:textColor="#000000"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="남았어요!"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/StepCounter"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="392dp"
-            android:layout_height="344dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             app:layout_constraintBottom_toTopOf="@+id/StartButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.717" />
+            app:layout_constraintVertical_bias="0.717"
+            android:background="@drawable/circular_shape"
+            android:progressDrawable="@drawable/circular_progress_bar"/>
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="test"
-            tools:ignore="HardcodedText" />
+            android:id="@+id/stepCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="걸음 수"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/StepCounter"
+            app:layout_constraintBottom_toBottomOf="@id/StepCounter"
+            app:layout_constraintStart_toStartOf="@id/StepCounter"
+            app:layout_constraintEnd_toEndOf="@id/StepCounter"/>
+
         <Button
             style="@style/CustomButtonStyle"
             android:id="@+id/StartButton"
             android:layout_width="116dp"
             android:layout_height="74dp"
             android:layout_marginBottom="50dp"
-            android:text="starts"
+            android:text="걷기 시작!"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
