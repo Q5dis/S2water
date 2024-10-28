@@ -18,14 +18,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginBottom="230dp">
+        android:gravity="center"
+        android:layout_marginBottom="200dp">
 
         <TextView
             android:id="@+id/textView_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:gravity="center"
             android:text="순수한 물을"
             android:textColor="#000000"
             android:textSize="13sp" />
@@ -35,8 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:text="총 0ml"
+            android:textStyle="bold"
+            android:text="0ml"
             android:textColor="#000000"
             android:textSize="23sp" />
 
@@ -44,8 +44,7 @@
             android:id="@+id/textView_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
+            android:layout_marginBottom="0dp"
             android:text="마셨어요!"
             android:textColor="#000000"
             android:textSize="13sp" />
@@ -62,8 +61,7 @@
             android:layout_width="230dp"
             android:layout_height="310dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="70dp"
             android:background="#F4F7FF">
 
             <View

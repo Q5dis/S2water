@@ -24,4 +24,8 @@
         <item name="itemTextColor">@android:color/transparent</item>
     </style>
 
+    <style name="CustomSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+
+    </style>
+
 </resources>
