@@ -10,7 +10,7 @@
         <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
         <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
 
-        <!-- Other theme customizations -->
+
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:windowBackground">@color/windowBackground</item>

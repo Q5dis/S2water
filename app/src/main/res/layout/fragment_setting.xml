@@ -17,7 +17,7 @@
                 android:id="@+id/titleTextNotification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="알림 설정"
+                android:text="음수 설정"
                 android:textColor="#2643FF"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -150,7 +150,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="알림 주기 설정"
+                    android:text="걷기 시간 설정"
                     android:textSize="16sp"
                     android:layout_weight="1"/>
 
