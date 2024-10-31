@@ -1,0 +1,6 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/s2sprout" android:duration="300" />
+    <item android:drawable="@drawable/s2sprout2" android:duration="300" />
+    <item android:drawable="@drawable/s2sprout3" android:duration="300" />
+</animation-list>

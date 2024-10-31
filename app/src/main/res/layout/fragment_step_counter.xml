@@ -61,14 +61,14 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="300dp"
             android:layout_height="300dp"
+            android:background="@drawable/circular_shape"
+            android:progressDrawable="@drawable/circular_progress_bar"
             app:layout_constraintBottom_toTopOf="@+id/StartButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.717"
-            android:background="@drawable/circular_shape"
-            android:progressDrawable="@drawable/circular_progress_bar"/>
+            app:layout_constraintVertical_bias="0.782" />
 
         <TextView
             android:id="@+id/stepCountText"
