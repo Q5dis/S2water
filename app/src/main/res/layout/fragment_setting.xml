@@ -169,7 +169,10 @@
             android:orientation="horizontal"
             android:layout_gravity="bottom"
             >
-            <TextView
+            <Button
+                android:id="@+id/developer_setting"
+                android:backgroundTint="@color/white"
+                android:textColor="#dfdfdf"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="개발자 설정 열기"

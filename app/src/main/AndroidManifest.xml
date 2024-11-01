@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".progressbar"></activity>
+        <activity android:name=".DeveloperSetting"></activity>
 
     </application>
 

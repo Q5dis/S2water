@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     public void navigateToStepCount() {
         replaceFragment(new StepCounter());
     }
+    public void navigateToDeveloperSetting() {replaceFragment(new DeveloperSetting());}
 
 
 
