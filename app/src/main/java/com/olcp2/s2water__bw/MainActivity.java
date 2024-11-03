@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
+        // 이전 프래그먼트로 돌아갈 수 있도록 추가
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
@@ -57,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
     public void navigateToStepCount() {
         replaceFragment(new StepCounter());
     }
-    public void navigateToDeveloperSetting() {replaceFragment(new DeveloperSetting());}
 
 
 

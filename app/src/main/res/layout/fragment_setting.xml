@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/setting_fragment"
     tools:context=".SettingFragment">
 
 
@@ -170,7 +171,7 @@
             android:layout_gravity="bottom"
             >
             <Button
-                android:id="@+id/developer_setting"
+                android:id="@+id/dev_setting"
                 android:backgroundTint="@color/white"
                 android:textColor="#dfdfdf"
                 android:layout_width="0dp"
