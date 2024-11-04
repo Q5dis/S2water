@@ -13,10 +13,19 @@
     </style>
 
     <style name="WaterCheckBottomButton" parent="Widget.MaterialComponents.Button">
-        <item name="android:backgroundTint">#2643FF</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:backgroundTint">#ffffff</item>
+        <item name="android:textColor">#2643FF</item>
         <item name="android:elevation">0dp</item>
+        <item name="android:outlineProvider">none</item> <!-- Removes shadow outline -->
+        <item name="shapeAppearanceOverlay">@style/NoRadiusShape</item>
     </style>
+
+    <style name="NoRadiusShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">@null</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+
+
 
     <style name="CustomBotNav" parent="Widget.Design.BottomNavigationView">
         <item name="android:background">#ffffff</item>

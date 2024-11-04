@@ -14,11 +14,6 @@ public class StepCounterManager extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_step_counter_manager, container, false);
 
-        Button button = view.findViewById(R.id.createStepCount);
-        button.setOnClickListener(v -> {
-            ((MainActivity) getActivity()).navigateToStepCount();
-        });
-
         return view; // Return the inflated view
     }
 }
