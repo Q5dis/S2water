@@ -10,7 +10,7 @@
         android:title="" />
     <item
         android:id="@+id/stats"
-        android:icon="@drawable/s2sprout"
+        android:icon="@drawable/sprout_s2"
         android:title="" />
     <item
         android:id="@+id/setting"

@@ -29,7 +29,7 @@ public class StepCounter extends Fragment implements SensorEventListener {
     private TextView stepCountText, textViewGoalStep;
     private Button startButton;
     private int stepGoal = 10000;  // Step goal
-    private int stepCount = 0;      // Current step count
+    private int stepCount = 90;      // Current step count
     private static final int PERMISSION_REQUEST_CODE = 1;
 
     @Override

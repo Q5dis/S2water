@@ -12,6 +12,10 @@
         <item name="cornerSize">12dp</item>
     </style>
 
+    <style name="nullColor" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">#ffffff</item>
+    </style>
+
     <style name="WaterCheckBottomButton" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">#ffffff</item>
         <item name="android:textColor">#2643FF</item>
