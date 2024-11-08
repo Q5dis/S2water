@@ -20,12 +20,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Set the default fragment
         if (savedInstanceState == null) {
             replaceFragment(new WaterCheckFragment());
         }
 
-        // Set up BottomNavigationView listener
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.home:
