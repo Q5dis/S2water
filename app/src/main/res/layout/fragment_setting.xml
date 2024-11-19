@@ -63,7 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:hint="10,000 ml"
+                    android:hint="2,000 ml"
                     android:maxWidth="100dp"/>
             </LinearLayout>
 
@@ -133,12 +133,13 @@
                     android:textSize="16sp"
                     android:layout_weight="1"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/stepGoal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10,000 보"
-                    android:textSize="16sp"/>
+                    android:inputType="number"
+                    android:hint="10,000 보"
+                    android:maxWidth="100dp"/>
             </LinearLayout>
 
             <LinearLayout
