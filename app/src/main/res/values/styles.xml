@@ -7,6 +7,12 @@
         <item name="shapeAppearanceOverlay">@style/RoundedCorners</item>
     </style>
 
+    <style name="Pause" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">#FFFFFF</item>
+        <item name="android:textColor">#CE1212</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedCorners</item>
+    </style>
+
     <style name="SmallRoundConerButton" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">#2643FF</item>
         <item name="android:textColor">#FFFFFF</item>

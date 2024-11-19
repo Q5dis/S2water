@@ -5,23 +5,61 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".StepCounterManager"
-    android:id="@+id/StepcountManager"
-    >
-
-        <Button
-            style="@style/SmallRoundConerButton"
-            android:id="@+id/createStepCounter"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
-            android:text="+"
-            android:textSize="40dp" />
+    android:id="@+id/StepcountManager">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="30dp"
+            >
+
+                <TextView
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/stepcounterlist"
+                    android:text="\n       2024.11.13
+            \n       9,876걸음
+                                                삭제하기
+            \n       2.0km"
+                    android:textColor="#7E7E7E">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/stepcounterlist"
+                    android:text="\n       2024.11.14
+            \n       8,234걸음
+                                                삭제하기
+            \n       1.7km"
+                    android:textColor="#7E7E7E">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/stepcounterlist"
+                    android:text="\n       2024.11.15
+            \n       11,543걸음
+                                             삭제하기
+            \n       2.8km"
+                    android:textColor="#7E7E7E">
+                </TextView>
 
         </LinearLayout>
+
+        <Button
+            android:background="@drawable/blue_square"
+            android:id="@+id/createStepCounter"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="40dp"
+            android:text="+"
+            android:textSize="30dp" />
+
 </FrameLayout>
