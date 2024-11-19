@@ -42,7 +42,6 @@ android {
 dependencies {
     implementation("nl.dionsegijn:konfetti-xml:2.0.4")
     implementation("nl.dionsegijn:konfetti-core:2.0.4")
-
     implementation("androidx.fragment:fragment:1.4.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
